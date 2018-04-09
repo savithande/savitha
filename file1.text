@@ -1,0 +1,25 @@
+import os.path
+from os import path
+import shutil
+
+def main():
+
+    f=open('/home/savitha/Desktop/abc.text','w')
+    f.write('hii  \nhow r u\nhad ur dinner\n' )
+    f.close()
+
+    if path.exists('/home/savitha/Desktop/abc.text'):
+        src=path.realpath('/home/savitha/Desktop/abc.text')
+        head,tail=path.split(src)
+
+    f=open('/home/savitha/Desktop/xyz.text','w')
+    des=path.realpath('/home/savitha/Desktop/xyz.text')
+
+    shutil.copy(src,des)
+
+
+
+if __name__ == '__main__':
+    main()
+
+# 2
